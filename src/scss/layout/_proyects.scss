@@ -1,0 +1,6 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.item__link {
+  @include button();
+}
