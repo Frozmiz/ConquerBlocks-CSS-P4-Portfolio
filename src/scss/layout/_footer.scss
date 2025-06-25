@@ -24,6 +24,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-bottom: 2px solid white;
+    padding-bottom: 5rem;
 
     input,
     textarea {
@@ -54,6 +56,13 @@
       justify-content: space-between;
       gap: 1rem;
       list-style: none;
+
+      li {
+        a:hover img {
+          filter: brightness(0) saturate(100%) invert(85%) sepia(75%)
+            saturate(3102%) hue-rotate(104deg) brightness(90%) contrast(104%);
+        }
+      }
     }
   }
 }

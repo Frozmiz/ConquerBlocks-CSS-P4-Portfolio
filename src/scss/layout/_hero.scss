@@ -6,18 +6,24 @@
   padding-bottom: 3rem;
 
   .hero__top {
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 0;
     padding-bottom: 4rem;
+
     &-background {
       background: linear-gradient(
         to top,
         rgba(36, 36, 36, 0.4) 0%,
         rgba(36, 36, 36, 0.05) 100%
       );
+      padding-top: 4rem;
+      margin-top: -1rem;
+      height: auto;
+      padding-bottom: 0;
 
       .image {
         width: 100%;
@@ -47,13 +53,19 @@
 
     .media {
       flex-wrap: wrap;
-      padding: 1rem 1rem 4rem 1rem;
+      padding: 2rem 1rem 4rem 1rem;
       width: 100%;
 
       ul {
         display: flex;
         gap: 2rem;
         justify-content: center;
+        li {
+          a:hover img {
+            filter: brightness(0) saturate(100%) invert(85%) sepia(75%)
+              saturate(3102%) hue-rotate(104deg) brightness(90%) contrast(104%);
+          }
+        }
       }
     }
   }
