@@ -1,6 +1,51 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
 
+.proyects__items {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  .items__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+  }
+
+  &__container {
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        color: $grey-light;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
 .item__link {
   @include button();
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  &:last-child {
+    padding-left: 2rem;
+  }
 }
