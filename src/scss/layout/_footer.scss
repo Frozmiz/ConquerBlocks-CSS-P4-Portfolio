@@ -1,6 +1,66 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
 
+.footerContainer {
+  background-color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  p {
+    color: $grey-light;
+    font-size: 1rem;
+  }
+
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input,
+    textarea {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      padding: 2rem 1rem 1rem 2rem;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-textarea {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .name h2 {
+    font-size: 1.3rem;
+    padding-bottom: 0;
+  }
+
+  .media {
+    padding: 1rem 1rem 3rem 1rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      list-style: none;
+    }
+  }
+}
+
 .form__submit {
   @include button();
+  display: flex;
+  justify-content: right;
+  padding-top: 1rem;
 }
