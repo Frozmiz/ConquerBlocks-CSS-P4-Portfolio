@@ -73,6 +73,10 @@
     @include breakpoint(tabletHorizontal) {
       gap: 4rem 9rem;
     }
+
+    @include breakpoint(desktop) {
+      gap: 1rem 1rem;
+    }
   }
 }
 
