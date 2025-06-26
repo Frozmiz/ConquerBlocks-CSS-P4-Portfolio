@@ -1,12 +1,25 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
 
-.footerContainer {
+#footer {
   background-color: $grey;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footerContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    padding: 0 30px;
+  }
 
   h2 {
     font-size: 2rem;

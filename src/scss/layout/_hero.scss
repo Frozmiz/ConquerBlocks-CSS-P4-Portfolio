@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: row-reverse;
     padding-bottom: 1rem;
+    width: 100%;
+    max-width: none;
   }
 
   .hero__top {
@@ -20,8 +22,10 @@
     padding-bottom: 2rem;
     @include breakpoint(tablet) {
       padding-right: 0;
-      width: 40%;
+      width: 100%;
       align-items: flex-end;
+      position: relative;
+      right: 0;
     }
 
     &-background {
@@ -35,9 +39,10 @@
       height: auto;
       padding-bottom: 0;
       @include breakpoint(tablet) {
-        padding-right: -2rem;
-        width: 110%;
-        margin-right: -10%;
+        padding-right: 0;
+        width: 100%;
+        margin-right: 0;
+        overflow: hidden;
       }
 
       .image {
@@ -46,25 +51,31 @@
         justify-content: center;
         overflow: hidden;
         @include breakpoint(tablet) {
-          width: 110%;
+          width: 100%;
           justify-content: flex-end;
         }
 
         picture {
           width: 100%;
           height: 100%;
+          max-width: 100%;
           @include breakpoint(tablet) {
             width: 100%;
-            min-height: 400px;
+            min-height: 500px;
+            max-width: 120%;
           }
 
           img {
             width: 100%;
             height: auto;
+            max-width: 100%;
             object-fit: cover;
             object-position: center;
             @include breakpoint(tablet) {
               object-position: right center;
+              max-width: 100%;
+              width: 120%;
+              min-height: 500px;
             }
           }
         }
@@ -85,10 +96,15 @@
       gap: 2rem;
       justify-content: center;
       @include breakpoint(tablet) {
-        gap: 1rem;
+        gap: 2rem;
         justify-content: right;
       }
       li {
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+
         a:hover img {
           filter: brightness(0) saturate(100%) invert(85%) sepia(75%)
             saturate(3102%) hue-rotate(104deg) brightness(90%) contrast(104%);
@@ -102,8 +118,14 @@
   text-align: center;
   @include breakpoint(tablet) {
     text-align: left;
-    width: 60%;
-    padding-right: 2rem;
+    width: 100%; // Ajustamos para coincidir con el nuevo tamaño de la imagen
+
+    max-width: 1460px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(desktop) {
+    padding-left: 30px;
   }
 
   .name {

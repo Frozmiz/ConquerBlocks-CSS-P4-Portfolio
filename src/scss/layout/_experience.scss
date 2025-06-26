@@ -8,6 +8,7 @@
   padding-bottom: 3rem;
   @include breakpoint(tablet) {
     border-bottom: none;
+    padding-bottom: 1rem;
   }
 
   .items {
@@ -19,7 +20,7 @@
     @include breakpoint(tablet) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem 4rem;
+      gap: 3rem 2rem;
       text-align: left;
       align-items: center;
     }

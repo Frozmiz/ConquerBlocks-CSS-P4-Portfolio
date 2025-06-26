@@ -1,32 +1,54 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
 
-.proyects__items {
+.projects__items {
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
-
-  .items__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.1;
-    }
+  @include breakpoint(tablet) {
+    padding-bottom: 4rem;
   }
 
   &__container {
+    .items__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+      @include breakpoint(tablet) {
+        padding-bottom: 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        @include breakpoint(tablet) {
+          font-size: 4rem;
+        }
+      }
+
+      a span {
+        @include breakpoint(tablet) {
+          font-size: 1.4rem;
+        }
+      }
+
+      @include breakpoint(tablet) {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+      }
+    }
     h2 {
       font-size: 1.3rem;
       font-weight: 700;
       line-height: 1.1;
       padding-top: 1rem;
       padding-bottom: 1rem;
+      @include breakpoint(tablet) {
+        font-size: 1.6rem;
+      }
     }
 
     ul {
@@ -35,7 +57,21 @@
       li {
         color: $grey-light;
         padding-right: 1rem;
+        @include breakpoint(tablet) {
+          font-size: 1.1rem;
+        }
       }
+    }
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 2rem;
+      text-align: left;
+    }
+
+    @include breakpoint(tabletHorizontal) {
+      gap: 4rem 9rem;
     }
   }
 }

@@ -13,7 +13,7 @@
     }
   }
 
-  @if $bp == tablethorizontal {
+  @if $bp == tabletHorizontal {
     @media (min-width: $bp-tablet-horizontal) {
       @content;
     }
