@@ -362,20 +362,27 @@
 
       <footer id="footer">
         <div class="footerContainer">
-          <h2>Contact</h2>
-          <p>
-            I would love to hear about your project and how I could help. Please
-            fill in the form, and I’ll get back to you as soon as possible.
-          </p>
+          <div class="footer__header">
+            <h2>Contact</h2>
+            <p>
+              I would love to hear about your project and how I could help.
+              Please fill in the form, and I'll get back to you as soon as
+              possible.
+            </p>
+          </div>
           <div class="footer__form">
             <form action="" class="form">
               <div class="form__group">
                 <input type="text" id="name" placeholder="NAME" />
+                <img src="/img/error.svg" alt="Error" class="error-icon" />
+                <span class="error-message">Sorry, invalid format here</span>
                 <label for="name"></label>
               </div>
               <div class="form__group">
                 <input type="email" id="email" placeholder="EMAIL" />
-                <label for="name"></label>
+                <img src="/img/error.svg" alt="Error" class="error-icon" />
+                <span class="error-message">Sorry, invalid format here</span>
+                <label for="email"></label>
               </div>
               <div class="form__group">
                 <textarea
@@ -383,6 +390,8 @@
                   id="message"
                   placeholder="MESSAGE"
                 ></textarea>
+                <img src="/img/error.svg" alt="Error" class="error-icon" />
+                <span class="error-message">Sorry, can't be empty</span>
                 <label for="message"></label>
               </div>
               <a href="#" class="form__submit">
@@ -420,9 +429,41 @@
             </div>
           </div>
         </div>
+        <div class="footer__container__tablet">
+          <div class="footer__bottom">
+            <div class="name">
+              <h2>adamkeyes</h2>
+            </div>
+            <div class="media">
+              <ul>
+                <li>
+                  <a href="#" class="github"
+                    ><img src="/img/github-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="frontendmentor"
+                    ><img src="/img/frontendmentor-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="linkedin"
+                    ><img src="/img/LinkedIn-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="twitter"
+                    ><img src="/img/twitter-icon.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </main>
 
     <script type="module" src="/src/main.js"></script>
+    <script src="/src/validation.js"></script>
   </body>
 </html>

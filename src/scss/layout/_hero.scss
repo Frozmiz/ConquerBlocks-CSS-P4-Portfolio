@@ -4,6 +4,11 @@
 .hero {
   display: block;
   padding-bottom: 5rem;
+  background-image: url("/img/figure1.svg"), url("/img/figure2.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: -16rem 6rem, 19rem 19rem;
+  background-size: auto, auto;
+  background-attachment: scroll, scroll;
   @include breakpoint(tablet) {
     display: flex;
     flex-direction: row-reverse;
@@ -127,8 +132,8 @@
         }
 
         a:hover img {
-          filter: brightness(0) saturate(100%) invert(85%) sepia(75%)
-            saturate(3102%) hue-rotate(104deg) brightness(90%) contrast(104%);
+          filter: brightness(100%) saturate(100%) invert(28%) sepia(19%)
+            saturate(1558%) hue-rotate(115deg) brightness(90%) contrast(83%);
         }
       }
     }
@@ -294,9 +299,8 @@
             }
 
             a:hover img {
-              filter: brightness(0) saturate(100%) invert(85%) sepia(75%)
-                saturate(3102%) hue-rotate(104deg) brightness(90%)
-                contrast(104%);
+              filter: brightness(100%) saturate(100%) invert(28%) sepia(19%)
+                saturate(1558%) hue-rotate(115deg) brightness(90%) contrast(83%);
             }
           }
         }
