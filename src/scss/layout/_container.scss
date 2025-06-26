@@ -7,8 +7,7 @@
   margin-right: auto;
   padding: 0 20px;
   width: 100%;
-}
-
-.container--1220 {
-  max-width: 96%;
+  @include breakpoint(tablet) {
+    padding: 0 40px;
+  }
 }
