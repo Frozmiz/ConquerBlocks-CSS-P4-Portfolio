@@ -24,6 +24,9 @@
       text-align: left;
       align-items: center;
     }
+    @include breakpoint(desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
     .item {
       display: flex;
