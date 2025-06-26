@@ -6,6 +6,9 @@
   border-bottom: 2px solid white;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @include breakpoint(tablet) {
+    border-bottom: none;
+  }
 
   .items {
     display: flex;
@@ -30,6 +33,9 @@
         font-weight: 700;
         line-height: 1.1;
         margin-bottom: 0.5rem;
+        @include breakpoint(tablet) {
+          font-size: 2rem;
+        }
       }
 
       .item__description {
