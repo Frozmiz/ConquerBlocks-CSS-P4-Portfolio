@@ -21,16 +21,44 @@
     padding: 0 30px;
   }
 
-  h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    padding: 3rem 1rem 1rem 1rem;
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    text-align: left;
   }
 
-  p {
-    color: $grey-light;
-    font-size: 1rem;
+  .footer__header {
+    @include breakpoint(desktop) {
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 3rem 1rem 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      padding: 3rem 1rem 1rem 1rem;
+      @include breakpoint(desktop) {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    p {
+      color: $grey-light;
+      font-size: 1rem;
+      @include breakpoint(desktop) {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 
   .footer__form {
@@ -39,6 +67,14 @@
     width: 100%;
     border-bottom: 2px solid white;
     padding-bottom: 5rem;
+
+    @include breakpoint(desktop) {
+      width: 80%;
+      grid-column: 2;
+      border-bottom: none;
+      padding-bottom: 0;
+      padding-top: 2rem;
+    }
 
     input,
     textarea {
@@ -56,6 +92,23 @@
     }
   }
 
+  .footer__bottom {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-top: 2rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-column: 1 / -1;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 2px solid white;
+    }
+  }
+
   .name h2 {
     font-size: 1.3rem;
     padding-bottom: 0;
@@ -63,6 +116,9 @@
 
   .media {
     padding: 1rem 1rem 3rem 1rem;
+    @include breakpoint(tablet) {
+      padding: 2rem 0rem 2rem 2rem;
+    }
 
     ul {
       display: flex;

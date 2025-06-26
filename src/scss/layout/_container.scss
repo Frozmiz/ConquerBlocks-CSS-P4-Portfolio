@@ -10,4 +10,7 @@
   @include breakpoint(tablet) {
     padding: 0 30px;
   }
+  @include breakpoint(desktop) {
+    padding: 0 100px;
+  }
 }
