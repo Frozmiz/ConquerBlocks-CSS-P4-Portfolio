@@ -61,6 +61,13 @@
       right: 0;
       background-position: 46rem 5rem;
     }
+
+    @include breakpoint(desktopxl) {
+      top: 0;
+      left: 0;
+      right: 0;
+      background-position: 57rem 15rem;
+    }
   }
 }
 
