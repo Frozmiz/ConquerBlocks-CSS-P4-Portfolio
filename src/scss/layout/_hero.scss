@@ -4,11 +4,6 @@
 .hero {
   display: block;
   padding-bottom: 5rem;
-  background-image: url("/img/figure1.svg"), url("/img/figure2.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: -16rem 6rem, 19rem 19rem;
-  background-size: auto, auto;
-  background-attachment: scroll, scroll;
   @include breakpoint(tablet) {
     display: flex;
     flex-direction: row-reverse;
@@ -98,7 +93,7 @@
   }
 
   // DESKTOP
-  .mainContainer {
+  .heroContainer {
     @include breakpoint(desktop) {
       display: grid;
       grid-template-columns: 1fr 1fr;
