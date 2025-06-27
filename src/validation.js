@@ -79,6 +79,25 @@ document.addEventListener('DOMContentLoaded', function () {
     emailInput.addEventListener('blur', validateEmail);
     messageInput.addEventListener('blur', validateMessage);
 
+    // Input validation (while typing)
+    nameInput.addEventListener('input', function () {
+        if (nameInput.classList.contains('error')) {
+            validateName();
+        }
+    });
+
+    emailInput.addEventListener('input', function () {
+        if (emailInput.classList.contains('error')) {
+            validateEmail();
+        }
+    });
+
+    messageInput.addEventListener('input', function () {
+        if (messageInput.classList.contains('error')) {
+            validateMessage();
+        }
+    });
+
     // Clear errors on focus
     nameInput.addEventListener('focus', () => hideError(nameInput));
     emailInput.addEventListener('focus', () => hideError(emailInput));
